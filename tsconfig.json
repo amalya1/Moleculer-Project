@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "removeComments": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "exclude": ["dist", "node_modules",  "**/*.spec.ts", "fixtures", "tmp", ".eslintrc.js"]
+}

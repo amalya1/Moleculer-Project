@@ -1,0 +1,50 @@
+{
+  "name": "crm-moleculer-user",
+  "version": "1.0.0",
+  "description": "My Moleculer microservices project",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && ts-node ./node_modules/moleculer/bin/moleculer-runner.js --hot --repl --config dist/moleculer.config.js dist/services/**/*.service.js",
+    "cli": "moleculer connect NATS",
+    "start": "tsc && moleculer-runner dist/services",
+    "lint": "eslint --ext .js,.ts .",
+    "dc:up": "docker-compose up --build -d",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "Amalya",
+  "devDependencies": {
+    "@types/bluebird": "^3.5.36",
+    "@types/node": "^10.17.60",
+    "@types/nodemailer": "^6.4.4",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-optimize-regex": "^1.2.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
+    "moleculer-repl": "^0.5.3",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.9.10"
+  },
+  "dependencies": {
+    "generate-password": "^1.7.0",
+    "ioredis": "^4.27.9",
+    "jsonwebtoken": "^8.5.1",
+    "moleculer": "0.13.3",
+    "moment": "^2.29.1",
+    "nats": "^1.4.12",
+    "nodemailer": "^6.7.1",
+    "randomstring": "^1.2.1",
+    "ssh2": "^1.14.0"
+  },
+  "engines": {
+    "node": ">= 8.x.x"
+  }
+}
